@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+  background-color: black;
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 80vw;
+}
+
+.wrapper div {
+  background-color: beige;
+  padding: 30px;
+}
+
+.wrapper div:nth-child(even) {
+  background-color: brown;
+}
