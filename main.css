@@ -4,19 +4,67 @@ body {
 }
 
 .wrapper {
-  margin: 0 auto;
+  margin: 10px auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, minmax(100px, auto));
-  max-width: 80vw;
-  gap: 25px;
+  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "header header header header"
+    "aside main main main"
+    "aside main main main"
+    "aside main main main"
+    "aside main main main"
+    "footer footer footer footer";
+}
+
+@media screen and (max-width: 760px) {
+  .wrapper {
+    margin: 10px auto;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "header header header header"
+      "main main main main"
+      "main main main main"
+      "main main main main"
+      "aside aside aside aside"
+      "footer footer footer footer";
+  }
 }
 
 .wrapper div {
-  background-color: beige;
-  padding: 75px;
+  background-color: #f3f3f3;
+  padding: 50px;
 }
 
-.wrapper div:nth-child(even) {
-  background-color: brown;
+.main div {
+  background-color: cornsilk;
+  padding: 10px;
+  grid-row: 3/4;
+}
+
+.main p {
+  grid-column: 2/3;
+}
+
+.header {
+  grid-area: header;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
 }
