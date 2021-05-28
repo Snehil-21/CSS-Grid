@@ -12,11 +12,11 @@
 
 ## Desktop Layout
 
-![] (Css-Grid\images\Desktop_Layout.png)
+![Desktop_Layout](images/Desktop_Layout.png)
 
 ## Mobile/Tablet Layout
 
-![] (Css-Grid\images\Mobile_Layout.png)
+![Mobile/Tablet_Layout](images/Mobile_Layout.png)
 
 ## How to use in your webpage
 
